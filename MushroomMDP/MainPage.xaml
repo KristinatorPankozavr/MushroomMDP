@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MushroomMDP.MainPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="White" Padding="10">
+            <ContentPage.Content>
+                <StackLayout Margin="10" Orientation="Vertical">
+                    <Image x:Name="profileImage"/>
+                    <ListView x:Name="aboutList" ItemSelected="aboutList_ItemSelected" SelectionMode="Single">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell Text="{Binding Title}" Detail="{Binding Description}" ImageSource="{Binding Image}">
+                                    
+                                </ImageCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
